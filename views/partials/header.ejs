@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+    <link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="game.css">
+    <title>TheDivviedUpSociety</title>
+</head>
+<body>
+ 
+    <nav class="d-flex justify-content-around align-items-center">
+        <div class="logo">
+            <h4>TheDivviedUpSociety</h4>
+        </div>
+        <ul class="nav-links d-flex justify-content-around">
+            <li>
+                <a href="/index">Home</a>
+            </li>
+			
+			
+            <% if(!currentUser){ %>
+			
+					<li><a href="/login">Login</a></li>
+					<li><a href="/register">Sign Up</a></li>				
+				<% } else {%>
+			<% if(currentUser["role"]=="ngohead"){ %>
+				<li><a href="/post">Post Jobs</a></li>
+				<li><a href="/request">Request Items</a></li>
+			<% } %>
+			<% if(currentUser["role"]=="creator" || currentUser["role"]=="head"){ %>
+				<li><a href="/jobpost">Create</a></li>
+			<% } %>
+			<% if(currentUser["role"]=="donator" || currentUser["role"]=="head"){ %>
+				<li><a href="/donate">Donate</a></li>
+			<% } %>
+			    <li><a href="/logout">Logout</a></li>
+				<li><a href="">Welcome <b><%= currentUser.role%></b>,<b><%= currentUser.username%></b></a></li>
+				<% } %>
+        </ul>
+    </nav>

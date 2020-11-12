@@ -1,0 +1,12 @@
+<%- include("partials/header") %>
+<div class="container">
+	<h1>
+		Your work assignments:
+	</h1>
+	<!-- currentUser -->
+	<% currentUser.jobs.forEach(function(job){ %>
+		Ngo-Name<strong><%= job.ngoname %></strong><br>
+		Final Product <strong><%= job.item %></strong><br><br>
+	<% }) %>
+</div>
+<%- include("partials/footer") %>

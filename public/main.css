@@ -1,0 +1,52 @@
+
+nav{
+    z-index: 1;
+    min-height: 6vh;
+    background-color: rgb(47, 48, 49);
+    font-family: 'Poppins', sans-serif;
+}
+.nav-links{
+    padding-top: 10px;
+    width: 45%;
+}
+.logo{
+    padding-top: 10px;
+}
+.nav-links a{
+    color: cornflowerblue;
+    text-decoration: none;
+}
+.nav-links a:hover{
+    color: white;
+    text-decoration: none;
+}
+.nav-links li{
+    list-style: none;
+}
+.logo{
+    font-size: 20px;
+    color: cornflowerblue;
+}
+header{
+   
+	background-image: url('child.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 100vh;
+}
+.imp{
+    color: cornsilk;
+     padding-top: 10%;
+    /* padding-left: 30%; */
+    font-size: 50px;
+}
+.main-logo{
+    height: 140px;
+}
+button{
+    border-radius: 50px !important;
+}
+.main-button{
+    padding-top: 10px;
+}

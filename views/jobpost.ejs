@@ -1,0 +1,31 @@
+<%- include("partials/header") %>
+<div class="container">
+	
+<% jobs.forEach(function(job){ %>
+
+	<h4>
+		<%= job.ngoname %>
+		<% if(job.verified){ %>
+			<i class="fa fa-check" aria-hidden="true"></i>
+		<% }else{ %>
+			<% if(currentUser.role=="head"){ %>
+				<a href="/verify/job/<%= job._id%>" type="button" class="btn btn-primary">Verify this job</a>
+			<% } %>
+		<% } %>
+	</h4>
+	<h4>
+		<%= job.location %>
+	</h4>
+	<h4>
+		<%= job.item %>
+	</h4>
+	<h4>
+		<%= job.money %>
+	</h4>
+	<a href="/showpost/<%= job._id%>" class="btn btn-primary">More info!</a>
+	<% if(currentUser.role=="creator"){ %>
+	<a href="/apply/<%= job._id %>" type="button" class="btn btn-primary">I would love to create this!</a>
+	<%}%> 
+<%})%>
+</div>
+<%- include("partials/footer") %>

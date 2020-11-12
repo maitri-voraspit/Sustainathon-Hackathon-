@@ -1,0 +1,13 @@
+.jumbotron-fluid{
+    background-image: url("https://images.unsplash.com/photo-1535462169218-aadfe41bda09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-weight: 700;
+    color: cornsilk;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 5px 10px 18px #888888;
+}
+html{
+	overflow-x:hidden;
+}
